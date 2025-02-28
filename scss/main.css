@@ -547,7 +547,7 @@ h6 span {
 .btn-outline {
   background-color: transparent;
   color: #ff9a1e;
-  border-color: #ff9a1e;
+  border: 1px solid #ff9a1e;
 }
 .btn-outline:hover {
   background-color: #ff9a1e;
@@ -774,7 +774,7 @@ h6 span {
 }
 .category__tab ul li a {
   display: block;
-  padding: 1mre;
+  padding: 1rem;
   text-align: center;
   border-radius: 3rem;
 }
@@ -785,4 +785,216 @@ h6 span {
 .category__tab ul li.active a {
   background-color: #ff9a1e;
   color: #fff;
+}
+
+.booking {
+  min-height: 50rem;
+  background-image: url("../img/restaurant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 145px;
+  background-position-y: -520px;
+}
+@media screen and (max-width: 480px) {
+  .booking {
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+}
+.booking__content {
+  background-color: #ff9a1e;
+  color: #fff;
+  height: 50rem;
+  width: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 480px) {
+  .booking__content {
+    margin: 2rem 0;
+    padding: 2rem;
+    width: 100%;
+    background-color: rgba(255, 154, 30, 0.8);
+  }
+}
+.booking__content::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  height: 100%;
+  width: 40vw;
+  background-color: #ff9a1e;
+}
+@media screen and (max-width: 480px) {
+  .booking__content::before {
+    display: none;
+  }
+}
+.booking__content .inner {
+  max-width: 40rem;
+  width: 100%;
+}
+.booking__content .inner small {
+  text-transform: uppercase;
+  color: #2d2d2d;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+.booking__content .inner h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin: 4rem 0 3rem;
+}
+.booking__content .inner p {
+  margin-bottom: 3rem;
+}
+
+.work__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .work__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.work__wrapper .work__card {
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+.work__wrapper .work__card i {
+  color: #ff9a1e;
+  font-size: 3rem;
+}
+.work__wrapper .work__card h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  color: #ff9a1e;
+}
+.work__wrapper .work__card p {
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.app__wrapper {
+  padding: 2rem 10rem;
+  background-color: #ffc884;
+  border-radius: 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+  height: 100%;
+  max-height: 44rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .app__wrapper {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    max-height: 74rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .app__img {
+    text-align: center;
+    margin-top: 5rem;
+  }
+}
+.app__content {
+  max-width: 55rem;
+  width: 100%;
+}
+.app__content h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin: 4rem 0 3rem;
+}
+.app__content p {
+  font-size: 2rem;
+  opacity: 0.5;
+  margin-bottom: 4rem;
+  font-weight: bold;
+}
+
+.testimonial__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 480px) {
+  .testimonial__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
+.testimonial__card {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  grid-gap: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  position: relative;
+}
+.testimonial__card::before {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: #ff9a1e;
+  top: 15px;
+  left: 15px;
+  z-index: -1;
+}
+.testimonial__card img {
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+.testimonial__card h4 {
+  font-size: 2rem;
+  line-height: 1;
+}
+.testimonial__card small {
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+.testimonial__card ul {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+.testimonial__card ul i {
+  color: #ff9a1e;
+}
+.testimonial__card p {
+  opacity: 0.8;
+}
+.testimonial .inner {
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #ff9a1e;
+}
+.testimonial__card:hover {
+  transform: scale(1.2);
+}
+.testimonial__img {
+  padding: 1rem;
 }/*# sourceMappingURL=main.css.map */

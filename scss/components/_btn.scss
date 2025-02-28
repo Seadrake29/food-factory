@@ -25,7 +25,7 @@
   &-outline {
     background-color: transparent;
     color: $clr-primary;
-    border-color: $clr-primary;
+    border: 1px solid $clr-primary;
     &:hover {
       background-color: $clr-primary;
       color: $clr-light;
