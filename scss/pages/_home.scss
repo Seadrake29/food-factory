@@ -238,6 +238,11 @@
     box-shadow: $shadow;
     text-align: center;
 
+    &.work__card:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
     i {
       color: $clr-primary;
       font-size: 3rem;
@@ -373,7 +378,7 @@
     border: 5px solid $clr-primary;
   }
 
-  &__card:hover {
+  &__card:hover img {
     transform: scale(1.2);
   }
 
@@ -383,3 +388,106 @@
 }
 
 // End of testimonial
+
+// Start of Subscribe content CSS
+
+.newsletter {
+  background-image: linear-gradient(rgba($clr-dark, 0.6), rgba($clr-dark, 0.6)),
+    url(../../img/restaurant.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include centerAll;
+  min-height: 45rem;
+
+  &__wrapper {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+    color: $clr-light;
+    text-align: center;
+
+    h2 {
+      font-size: clamp(2rem, 6vw, 5rem);
+    }
+
+    p {
+      font-size: 2rem;
+      margin: 2rem 0;
+      opacity: 0.8;
+    }
+
+    form {
+      input {
+        text-align: left;
+        padding: 0.8rem 1.6rem;
+        width: 38rem;
+        border: 3px solid $clr-light;
+        color: $clr-dark;
+        background-color: $clr-light;
+      }
+
+      button {
+        background-color: $clr-primary;
+        padding: 0.8rem 1.6rem;
+        border-radius: 0.5rem;
+        border: 3px solid $clr-light;
+        transform: translateX(-12px);
+
+        @include mediaQuery($mobile) {
+          width: 38rem;
+          margin-top: 1rem;
+          transform: translateX(0);
+        }
+      }
+
+      button:hover {
+        background-color: $clr-dark;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// End of Subscribe content CSS
+
+// Start of FAQ content CSS
+
+.faq {
+  &__block {
+    border-radius: 2rem;
+    box-shadow: $shadow;
+    margin-bottom: 4rem;
+  }
+
+  &__question {
+    @include centerBetween;
+    padding: 1.5rem 3rem;
+    cursor: pointer;
+
+    h3 {
+      font-size: 2.5rem;
+    }
+
+    i {
+      font-size: 1.8rem;
+      transition: 0.5s ease;
+    }
+  }
+
+  &__answer {
+    padding: 0.5rem 3rem;
+    height: auto;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  &__question.open i {
+    transform: rotate(45deg);
+  }
+
+  &__answer.open {
+    max-height: 20rem;
+  }
+}

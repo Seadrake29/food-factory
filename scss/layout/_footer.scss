@@ -1,0 +1,37 @@
+.footer {
+  background-color: $clr-dark;
+  &__wrapper {
+    @include grid(4, 2rem);
+    gap: 5rem;
+    margin: 1.5rem 0;
+    color: $clr-light;
+    line-height: 1.8;
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    ul li {
+      margin: 1.5rem 0;
+    }
+
+    a {
+      color: $clr-light;
+    }
+
+    p {
+      justify-content: center;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  color: $clr-primary;
+  background-color: $clr-dark;
+}
